@@ -1,0 +1,207 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000; /* Turkuaz arka plan */
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
+
+header .nav-link {
+    color: #00327a; /* Beyaz yazı rengi */
+    transition: color 0.3s ease;
+}
+
+header .nav-link:hover {
+    color: #fafafa; /* Turkuaz üzerine koyu bir renk */
+}
+
+header .form-control {
+    border-radius: 20px; /* Arama kutusunu yuvarlat */
+    border: 2px solid #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+header .form-control:focus {
+    border-color: #003333; /* Fokuslandığında koyu bir renk */
+    outline: none;
+}
+
+header .dropdown-menu {
+    background-color: #ffffff; /* Menü arka planı beyaz */
+    border: 1px solid #000000; /* Menü kenarlığı turkuaz */
+}
+
+header .dropdown-menu .dropdown-item {
+    color: #000000; /* Koyu turkuaz yazı rengi */
+}
+
+header .dropdown-menu .dropdown-item:hover {
+    background-color: #000000; /* Turkuaz arka plan */
+    color: #ffffff; /* Beyaz yazı rengi */
+}
+
+
+
+
+main {
+    padding: 20px;
+}
+
+.category-list, .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.category-item, .product-item {
+    width: 30%;
+    margin: 15px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-item a, .product-item p {
+    display: block;
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+}
+
+
+.category-container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+.category-card:hover {
+    transform: translateY(-5px);
+}
+.category-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.category-card a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #343a40;
+}
+.category-card a:hover {
+    color: #000000;
+}
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+/* Tüm kartların aynı genişlik ve yükseklikte olmasını sağlar */
+.card {
+    width: 400px; /* Genişlik */
+    height: 470px; /* Yükseklik */
+    display: flex;
+    flex-direction: column;
+	}
+
+/* Kart içerisindeki resimlerin uygun şekilde hizalanması */
+/* Kart içerisindeki resimlerin uygun şekilde hizalanması */
+.card img {
+    width: 100%; /* Resmi karta tam olarak sığdırır */
+    height: 250px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmin taşmasını engeller */
+}
+
+/* Kart içerisindeki metin ve buton hizalama */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-body h1 {
+    font-size: 1.5rem; /* Fiyat için daha uygun boyut */
+}
+
+.button {
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Daha küçük ekranlarda iki kart bir satır */
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 20px); /* Daha küçük ekranlarda tek kart */
+    }
+}
